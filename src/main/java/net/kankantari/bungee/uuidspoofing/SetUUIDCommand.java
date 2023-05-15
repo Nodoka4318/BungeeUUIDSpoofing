@@ -17,7 +17,7 @@ public class SetUUIDCommand extends Command {
         try {
             uuid = UUID.fromString(args[0]);
         } catch (IllegalArgumentException ex) {
-            ex.printStackTrace();
+            PluginMain.log("Invalid argument");
             return;
         }
 

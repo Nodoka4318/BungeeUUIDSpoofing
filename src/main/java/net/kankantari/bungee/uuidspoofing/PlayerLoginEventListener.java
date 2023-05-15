@@ -9,9 +9,9 @@ public class PlayerLoginEventListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PreLoginEvent e) {
         var uuid = PluginMain.getPlayerUuid();
-        e.getConnection().setOnlineMode(true);
         e.getConnection().setUniqueId(uuid);
+        // e.getConnection().setOnlineMode(true);
 
-        PluginMain.log(e.getConnection().getName() + "'s unique id was set to " + uuid.toString() + "!");
+        PluginMain.log(e.getConnection().getName() + "'s unique id was set to '" + uuid.toString() + "'!");
     }
 }
